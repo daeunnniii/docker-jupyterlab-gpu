@@ -1,0 +1,20 @@
+services:
+  tf2.17-torch2.5:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: ${USERNAME}
+        UID: ${UID}
+        PYTHON_VERSION: 3.10
+        MINICONDA_VERSION: ${MINICONDA_VERSION}
+        JUPYTER_PASSWORD: ${JUPYTER_PASSWORD}
+        TF_VERSION: ${TF_VERSION}
+    image: daeunnniii/jupyterlab:tf${TF_VERSION}-torch2.5
+    container_name: jupyterlab-gpu-tf${TF_VERSION}
+    ports:
+      - "${JUPYTER_PORT}:8888"
+    volumes:
+      - ${HOST_NOTEBOOK_PATH}:/notebook
+    command:
+      jupyter lab --notebook-dir=/notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token="${JUPYTER_PASSWORD}"

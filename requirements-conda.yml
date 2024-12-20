@@ -1,0 +1,26 @@
+name: base
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - cudnn
+  - cudatoolkit
+  - apscheduler
+  - numpy
+  - gplearn
+  - pandas
+  - pandas-profiling
+  - pandas-datareader
+  - matplotlib
+  - scikit-learn
+  - graphviz
+  - scipy
+  - statsmodels
+  - ipywidgets
+  - ipykernel
+  - ipytest
+  - ipympl
+  - pyopencl
+  - pykalman
+  - sentencepiece
+  - pillow
