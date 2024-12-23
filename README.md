@@ -22,6 +22,7 @@ channels:
 dependencies:
   - numpy
   - pandas
+  ...
 ```
 
 #### 2. requirements-pip.txt
@@ -30,6 +31,7 @@ matplotlib
 seaborn
 scikit-learn
 opencv-python
+...
 ```
 
 ### 실행
